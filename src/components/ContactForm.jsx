@@ -4,6 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 const ContactForm = () => {
     const { t } = useLanguage();
     const [status, setStatus] = useState('idle');
+    const [selectedCountry, setSelectedCountry] = useState('');
     const canvasRef = useRef(null);
 
     // Particle Animation Logic
@@ -129,17 +130,32 @@ const ContactForm = () => {
         const formData = new FormData(e.target);
         const data = Object.fromEntries(formData.entries());
 
+        // Handle custom country
+        if (data.country === 'other' && data.customCountry) {
+            data.country = data.customCountry;
+        }
+        delete data.customCountry;
+
         try {
             const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
             });
-            // We set success regardless for the demo so the user sees the confirmation state
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error || 'Failed to submit form');
+            }
+
             setStatus('success');
+            e.target.reset(); // Clear the form
+            setSelectedCountry(''); // Reset country
         } catch (error) {
             console.error('Error submitting form:', error);
-            setStatus('success');
+            // Revert state on error, maybe add an error state here later
+            alert('There was an error submitting your request: ' + error.message);
+            setStatus('idle');
         }
     };
 
@@ -179,30 +195,37 @@ const ContactForm = () => {
                             <div className="form-row">
                                 <div className="form-group-light">
                                     <label htmlFor="email">Work Email</label>
-                                    <input type="email" id="email" name="email" required />
+                                    <input type="email" id="email" name="workEmail" required pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" title="Please enter a valid work email address" />
                                 </div>
                                 <div className="form-group-light">
                                     <label htmlFor="phone">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" />
+                                    <input type="tel" id="phone" name="phoneNumber" required pattern="^[0-9+ ]+$" title="Please enter only numbers (and optional '+' sign)" onInput={(e) => { e.target.value = e.target.value.replace(/[^0-9+\s]/g, ''); }} />
                                 </div>
                             </div>
 
                             <div className="form-group-light">
                                 <label htmlFor="company">Company Name</label>
-                                <input type="text" id="company" name="company" required />
+                                <input type="text" id="company" name="companyName" required />
                             </div>
 
                             <div className="form-group-light">
                                 <label htmlFor="country">Country</label>
-                                <select id="country" name="country" required>
-                                    <option value="" disabled selected hidden>Select your country</option>
+                                <select id="country" name="country" required value={selectedCountry} onChange={(e) => setSelectedCountry(e.target.value)}>
+                                    <option value="" disabled hidden>Select your country</option>
                                     <option value="us">United States</option>
                                     <option value="uk">United Kingdom</option>
                                     <option value="eu">European Union</option>
                                     <option value="latam">Latin America</option>
-                                    <option value="other">Other</option>
+                                    <option value="other">Other (Please specify)</option>
                                 </select>
                             </div>
+
+                            {selectedCountry === 'other' && (
+                                <div className="form-group-light" style={{ marginTop: '-0.5rem' }}>
+                                    <label htmlFor="customCountry" className="sr-only" style={{ display: 'none' }}>Specify Country</label>
+                                    <input type="text" id="customCountry" name="customCountry" placeholder="Enter your country name..." required />
+                                </div>
+                            )}
 
                             <div className="form-group-light">
                                 <label htmlFor="message">How can we help you?</label>
