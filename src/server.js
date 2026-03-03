@@ -73,7 +73,12 @@ app.post('/api/contact', async (req, res) => {
     }
 });
 
-// Start server
-app.listen(PORT, () => {
-    console.log(`🚀 API Server running on http://localhost:${PORT}`);
-});
+// Start server only in local environment
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`🚀 API Server running on http://localhost:${PORT}`);
+    });
+}
+
+// Export the Express API for Vercel
+export default app;
