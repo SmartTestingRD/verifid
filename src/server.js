@@ -18,6 +18,9 @@ app.get('/api/health', (req, res) => {
     res.status(200).json({ status: 'ok', message: 'Verifid API is running' });
 });
 
+import { sendEmail } from './utils/email.js';
+import { generateContactEmailEnglish } from './utils/emailTemplates.js';
+
 // Endpoint to handle contact form submissions
 app.post('/api/contact', async (req, res) => {
     try {
@@ -58,6 +61,27 @@ app.post('/api/contact', async (req, res) => {
         ];
 
         const result = await query(sql, values);
+
+        // Send email notification to user
+        try {
+            const { subject, html, text } = generateContactEmailEnglish({
+                firstName,
+                companyName,
+                workEmail,
+                phoneNumber
+            });
+
+            await sendEmail({
+                to: workEmail,
+                subject,
+                html,
+                text
+            });
+            console.log(`Confirmation email sent to ${workEmail}`);
+        } catch (emailError) {
+            console.error('Failed to send confirmation email, but database record was saved:', emailError);
+            // Non-fatal error; we still return success to the frontend since the request was saved
+        }
 
         res.status(201).json({
             success: true,
