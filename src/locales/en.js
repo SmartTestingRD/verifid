@@ -38,7 +38,7 @@ export const en = {
     "hero.grid_status": "GRID STATUS: ONLINE",
     "hero.slide1.title1": "The Backbone of",
     "hero.slide1.title2": "Regulatory Automation",
-    "hero.slide1.desc": "VerifID secures the financial grid with next-gen infrastructure, biometric consensus, and real-time connectivity for over 300 million endpoints.",
+    "hero.slide1.desc": "verifID is a regulatory technology platform designed to help governments, financial regulators, and insurance supervisors automate compliance, identity validation, and financial instrument verification. By connecting institutions to unified digital standards aligned with international regulatory frameworks, verifID strengthens transparency, reduces fraud, and modernizes the infrastructure through which compliance is enforced across the financial system.",
     "hero.btn.init": "Initialize Connection",
     "hero.btn.docs": "View Documentation",
     "hero.btn.learn_more": "Learn More",
@@ -51,12 +51,12 @@ export const en = {
 
     "hero.slide2.title1": "Next Generation",
     "hero.slide2.title2": "Regulatory Identity",
-    "hero.slide2.desc": "Financial ID acts as the unified credential for seamless, regulator-approved onboarding across banks, crypto exchanges, and fintechs.",
+    "hero.slide2.desc": "Financial ID is a secure digital credential that certifies an individual or company has completed identity verification and regulatory compliance checks, including KYC, AML, and CFT requirements. Designed for financial institutions, it enables faster onboarding, trusted cross-border transactions, and a standardized infrastructure for verifying financial identity across regulated financial systems.",
     "hero.btn.fin_id": "Explore Financial ID",
 
     "hero.slide3.title1": "Bonds & Insurance",
     "hero.slide3.title2": "Unified Registry",
-    "hero.slide3.desc": "RUPF transforms fragmented insurance documents into single-source-of-truth cryptographic records accessible instantly by regulators and brokers.",
+    "hero.slide3.desc": "RUFP is a digital registry that records and verifies the authenticity of insurance policies and surety bonds. By providing a trusted verification layer for financial institutions, the private sector, and government authorities, RUFP helps eliminate fraudulent instruments and strengthens confidence in insurance-backed guarantees used in infrastructure, finance, and regulated transactions.",
     "hero.btn.rupf": "Discover RUPF",
 
     // Platform Intro (v7)

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import logoWhite from '../assets/logo-white.png';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -118,8 +119,7 @@ const Footer = () => {
         <div className="footer-top">
           <div className="footer-brand">
             <a href="/" className="logo">
-              <span className="logo-verif">verif</span>
-              <span className="logo-id">ID</span>
+              <img src={logoWhite} alt="verifID Logo" className="logo-img" />
             </a>
           </div>
 
@@ -217,16 +217,14 @@ const Footer = () => {
         }
 
         .footer-brand .logo {
-          font-family: var(--font-display);
-          font-weight: 800;
-          font-size: 2.5rem;
           display: flex;
           align-items: center;
-          letter-spacing: -0.02em;
         }
 
-        .footer-brand .logo-verif { color: #ffffff; }
-        .footer-brand .logo-id { color: #38bdf8; }
+        .footer-brand .logo-img { 
+          height: 52px;
+          width: auto;
+        }
 
         .footer-contact-modern {
           display: flex;

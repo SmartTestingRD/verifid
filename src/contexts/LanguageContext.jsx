@@ -3,10 +3,12 @@ import { en } from '../locales/en';
 import { es } from '../locales/es';
 import { pt } from '../locales/pt';
 import { fr } from '../locales/fr';
+import { el } from '../locales/el';
+import { tr } from '../locales/tr';
 
 const LanguageContext = createContext();
 
-const translations = { en, es, pt, fr };
+const translations = { en, es, pt, fr, el, tr };
 
 export const LanguageProvider = ({ children }) => {
     const [language, setLanguage] = useState('en'); // Default english

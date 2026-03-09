@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
+import logoColor from '../assets/logo-color.png';
+import logoSemiColor from '../assets/logo-semi-color.png';
+import logoBw from '../assets/logo-bw.png';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,7 +32,9 @@ const Navbar = () => {
     'en': '🇺🇸',
     'es': '🇪🇸',
     'fr': '🇫🇷',
-    'pt': '🇧🇷'
+    'pt': '🇧🇷',
+    'el': '🇬🇷',
+    'tr': '🇹🇷'
   };
 
   const handleMenuClick = () => {
@@ -63,8 +68,7 @@ const Navbar = () => {
       <div className="container navbar-container">
 
         <Link to="/" className="logo">
-          <span className="logo-verif">verif</span>
-          <span className="logo-id">ID</span>
+          <img src={scrolled ? logoColor : logoSemiColor} alt="verifID Logo" className="logo-img" />
         </Link>
 
         {/* Hamburger Menu Button */}
@@ -163,6 +167,8 @@ const Navbar = () => {
                 <button onClick={() => setLanguage('es')} className={language === 'es' ? 'active' : ''}>🇪🇸 Español</button>
                 <button onClick={() => setLanguage('fr')} className={language === 'fr' ? 'active' : ''}>🇫🇷 Français</button>
                 <button onClick={() => setLanguage('pt')} className={language === 'pt' ? 'active' : ''}>🇧🇷 Português</button>
+                <button onClick={() => setLanguage('el')} className={language === 'el' ? 'active' : ''}>🇬🇷 Ελληνικά</button>
+                <button onClick={() => setLanguage('tr')} className={language === 'tr' ? 'active' : ''}>🇹🇷 Türkçe</button>
               </div>
             </div>
 
@@ -238,19 +244,13 @@ const Navbar = () => {
         }
 
         .logo {
-          font-family: var(--font-display);
-          font-weight: 800;
-          font-size: 2.2rem;
           display: flex;
           align-items: center;
         }
         
-        .logo-verif {
-          color: var(--text-primary);
-        }
-        
-        .logo-id {
-          color: var(--brand-primary);
+        .logo-img {
+          height: 44px;
+          width: auto;
         }
 
         .nav-links {

@@ -9,7 +9,7 @@ export const pt = {
     "hero.grid_status": "STATUS DA REDE: ONLINE",
     "hero.slide1.title1": "A Espinha Dorsal da",
     "hero.slide1.title2": "Automação Regulatória",
-    "hero.slide1.desc": "A VerifID protege a rede financeira com infraestrutura de próxima geração, consenso biométrico e conectividade em tempo real.",
+    "hero.slide1.desc": "verifID é uma plataforma de tecnologia regulatória projetada para ajudar governos, reguladores financeiros e supervisores de seguros a automatizar a conformidade, a validação de identidade e a verificação de instrumentos financeiros. Ao conectar instituições a padrões digitais unificados alinhados com marcos regulatórios internacionais, o verifID fortalece a transparência, reduz fraudes e moderniza a infraestrutura por meio da qual a conformidade é aplicada em todo o sistema financeiro.",
     "hero.btn.init": "Inicializar Conexão",
     "hero.btn.docs": "Ver Documentação",
     "hero.btn.learn_more": "Saber Mais",
@@ -22,12 +22,12 @@ export const pt = {
 
     "hero.slide2.title1": "Identidade Regulatória da",
     "hero.slide2.title2": "Próxima Geração",
-    "hero.slide2.desc": "A Financial ID atua como credencial unificada para integrações contínuas, aprovada por reguladores em bancos e fintechs.",
+    "hero.slide2.desc": "O Financial ID é uma credencial digital segura que certifica que um indivíduo ou empresa concluiu a verificação de identidade e as checagens de conformidade regulatória, incluindo os requisitos KYC, AML e CFT. Projetado para instituições financeiras, permite uma integração mais rápida, transações internacionais confiáveis e uma infraestrutura padronizada para verificação de identidade financeira em sistemas regulados.",
     "hero.btn.fin_id": "Explorar Financial ID",
 
     "hero.slide3.title1": "Registro Unificado de",
     "hero.slide3.title2": "Seguros e Fiança",
-    "hero.slide3.desc": "O RUPF transforma documentos de seguro em registros criptográficos de fonte única acessíveis instantaneamente pelos órgãos reguladores.",
+    "hero.slide3.desc": "O RUFP é um registro digital que registra e verifica a autenticidade de apólices de seguro e fianças. Ao fornecer uma camada de verificação confiável para instituições financeiras, o setor privado e autoridades governamentais, o RUFP ajuda a eliminar instrumentos fraudulentos e fortalece a confiança em garantias apoiadas por seguros usadas em infraestrutura, finanças e transações reguladas.",
     "hero.btn.rupf": "Descobrir RUPF",
 
     // Platform Intro (v7)

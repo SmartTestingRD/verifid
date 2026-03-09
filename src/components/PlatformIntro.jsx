@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import iconColor from '../assets/icon-color.png';
 
 const PlatformIntro = () => {
   const { t } = useLanguage();
@@ -55,7 +56,7 @@ const PlatformIntro = () => {
 
           <div className="core-node">
             <div className="core-glow"></div>
-            <div className="core-center">V</div>
+            <img src={iconColor} alt="VerifID Icon" className="core-center-icon" />
           </div>
 
           <div className="pillar enterprises-pillar">
@@ -248,7 +249,7 @@ const PlatformIntro = () => {
           width: 80px;
           height: 80px;
           border-radius: 50%;
-          background: var(--brand-primary);
+          background: #ffffff;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -256,10 +257,11 @@ const PlatformIntro = () => {
           position: relative;
         }
 
-        .core-center {
-          font-size: 2rem;
-          font-weight: 900;
-          color: white;
+        .core-center-icon {
+          width: 45px;
+          height: auto;
+          object-fit: contain;
+          z-index: 2;
         }
 
         .core-glow {
