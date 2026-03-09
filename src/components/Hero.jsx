@@ -236,35 +236,35 @@ const Hero = () => {
                   <div className="card-decoration"></div>
                   <div className="card-texture"></div>
 
-                  <div className="card-inner">
-                    <div className="card-header">
-                      <div className="card-brand">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-secondary)" strokeWidth="2">
+                  <div className="card-inner" style={{ paddingTop: '2.5rem' }}>
+                    <div className="card-header" style={{ flexDirection: 'column', alignItems: 'center', gap: '1rem', textAlign: 'center' }}>
+                      <div className="card-brand" style={{ justifyContent: 'center' }}>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-secondary)" strokeWidth="2" style={{ width: 24, height: 24 }}>
                           <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path>
                           <path d="M3 5v14a2 2 0 0 0 2 2h16v-5H5a2 2 0 0 0 0 4h14v-4"></path>
                         </svg>
                         <span>VerifID Nacional</span>
                       </div>
-                      <div className="card-qr">
+                      <div className="card-qr" style={{ width: 140, height: 140, margin: '1rem 0' }}>
                         <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuANXIvqyxmlEJICDhjSlcqFCzMagPx0kIeHriFvHA1QA5mKcjmson9LXl7tyCPPkZbQoFCrQuqEKt-GfQlhypM_NGYhvUk4mBr7678bbjBpdw-gECblcbRy8tI1x9PTB2Yc8ri9a6j2Vba_d-eZD0bT0baeRJMPCtaF2ItevJZhY0RhUwQlX5FDfNFHsY5TTyPG4UePEAMbtT2kn8PCQJDi0r9X95zd09yXyK68jnVq5Dpt5P4Skotx-5AQesKJ29fyVS7VEpfznkId" alt="QR" />
                       </div>
                     </div>
 
-                    <div className="card-body">
-                      <div className="card-user">
-                        <div className="user-avatar">
+                    <div className="card-body" style={{ alignItems: 'center' }}>
+                      <div className="card-user" style={{ flexDirection: 'column', textAlign: 'center' }}>
+                        <div className="user-avatar" style={{ width: 80, height: 80 }}>
                           <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6AuqLopMl8ZQXZ5cfB37MgCPPuy8o1OxniCcVqPHzvBaf4eujXPylf2ZjHkXpCulQDud_8tf0pXFQ1uqkjiHOl4xxTK3ry37DK-hl9uNiw67B73hfADHEGJnKMPSwfSa8B7_IhDTSWa48XXJVvlxhWKBy8-PCFD_ASzx6KNN7R5XLrDiI9bpEfY2EVL8OAMdZRCgptb4US50oRf6sk4EThgFxdv_zjendMjvDL780ROQzBeZtzD5nZTWiBoL4N9V5foS983R0y0Qj" alt="User" />
                         </div>
-                        <div className="user-info">
+                        <div className="user-info" style={{ alignItems: 'center' }}>
                           <div className="info-line-long"></div>
                           <div className="info-line-short"></div>
                         </div>
                       </div>
 
-                      <div className="card-footer">
-                        <div className="card-number">xxxx-xxxx-xxxx-8842</div>
-                        <div className="card-status status-verified">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <div className="card-footer" style={{ flexDirection: 'column', alignItems: 'center', gap: '1rem', marginTop: '1.5rem', width: '100%' }}>
+                        <div className="card-number" style={{ fontSize: '1rem' }}>xxxx-xxxx-xxxx-8842</div>
+                        <div className="card-status status-verified" style={{ width: '100%', justifyContent: 'center', padding: '0.75rem' }}>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: 16, height: 16 }}>
                             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                             <polyline points="22 4 12 14.01 9 11.01"></polyline>
                           </svg>
@@ -760,25 +760,39 @@ const Hero = () => {
         }
 
 
-        /* ID CARD (Slide 2) */
+        /* ID CARD (Slide 2 - Now a Phone) */
         .id-card-wrapper {
           position: relative;
           width: 100%;
-          max-width: 450px;
+          max-width: 300px;
           perspective: 1000px;
+          margin: 0 auto;
         }
 
         .id-card {
            position: relative;
            width: 100%;
-           aspect-ratio: 1.586 / 1;
-           border-radius: 1rem;
+           aspect-ratio: 9 / 19;
+           border-radius: 2.5rem;
            background: linear-gradient(135deg, #1a2333 0%, #0a0e17 100%);
-           border: 1px solid rgba(211, 47, 47, 0.3);
-           box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+           border: 6px solid #2a3143;
+           box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 0 0 2px rgba(211, 47, 47, 0.4);
            overflow: hidden;
-           transform: rotateY(-10deg) rotateX(5deg);
+           transform: rotateY(-15deg) rotateX(8deg);
            transition: transform 0.5s ease;
+         }
+
+         .id-card::before {
+           content: '';
+           position: absolute;
+           top: 10px;
+           left: 50%;
+           transform: translateX(-50%);
+           width: 80px;
+           height: 22px;
+           background: #2a3143;
+           border-radius: 12px;
+           z-index: 20;
          }
 
          .id-card:hover { transform: rotateY(0deg) rotateX(0deg) scale(1.02); }
