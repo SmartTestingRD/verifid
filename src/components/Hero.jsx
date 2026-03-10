@@ -94,7 +94,6 @@ const Hero = () => {
               </p>
 
               <div className="hero-actions" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '0.5rem' }}>
-                <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 'bold' }}>CTA</span>
                 <button className="btn btn-primary btn-tech">
                   {t('nav.get_started')} <span className="arrow">→</span>
                 </button>
@@ -221,7 +220,6 @@ const Hero = () => {
               </p>
 
               <div className="hero-actions" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '0.5rem' }}>
-                <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 'bold' }}>CTA</span>
                 <Link to="/contact" className="btn btn-primary stitch-btn-primary btn-tech" style={{ textDecoration: 'none' }}>
                   {t('hero.btn.learn_more')} <span className="arrow">→</span>
                 </Link>
@@ -299,7 +297,6 @@ const Hero = () => {
               </p>
 
               <div className="hero-actions" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '0.5rem' }}>
-                <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 'bold' }}>CTA</span>
                 <Link to="/contact" className="btn btn-primary stitch-btn-primary btn-tech" style={{ textDecoration: 'none' }}>
                   {t('hero.btn.learn_more')} <span className="arrow">→</span>
                 </Link>

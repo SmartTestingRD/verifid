@@ -223,7 +223,7 @@ const Products = () => {
         }
 
         .product-visual-col {
-          height: 250px;
+          height: 320px;
           position: relative;
           display: flex;
           align-items: center;
@@ -330,104 +330,123 @@ const Products = () => {
         }
 
         /* ----------------------------------
-           Financial ID Visual (Floating Card)
+           Financial ID Visual (Phone Device)
            ---------------------------------- */
-        .fid-card {
-          width: 320px;
-          height: 200px;
-          background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
-          border: 1px solid rgba(255,255,255,0.2);
-          border-radius: 16px;
-          backdrop-filter: blur(10px);
-          box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 20px rgba(255,255,255,0.05);
-          padding: 1.5rem;
+        .fid-phone {
+          width: 150px;
+          height: 280px;
+          background: linear-gradient(135deg, #1a2333 0%, #0a0e17 100%);
+          border: 4px solid #2a3143;
+          border-radius: 20px;
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255,255,255,0.05);
+          padding: 1.5rem 0.75rem 1rem 0.75rem;
           display: flex;
           flex-direction: column;
-          transform: rotateY(-15deg) rotateX(10deg);
+          align-items: center;
+          position: relative;
+          transform: rotateY(-15deg) rotateX(8deg);
           transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .product-row:hover .fid-card {
+        .product-row:hover .fid-phone {
            transform: rotateY(0deg) rotateX(0deg) scale(1.05);
         }
 
-        .fid-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 1rem;
-          border-bottom: 1px solid rgba(255,255,255,0.1);
-          padding-bottom: 0.5rem;
-        }
-        
-        .fid-title {
-          font-size: 0.9rem;
-          font-weight: 800;
-          color: #ffffff;
-          letter-spacing: 0.1em;
+        .fid-phone-notch {
+           position: absolute;
+           top: 6px;
+           left: 50%;
+           transform: translateX(-50%);
+           width: 40px;
+           height: 12px;
+           background: #2a3143;
+           border-radius: 6px;
         }
 
-        .fid-chip {
-          width: 30px;
-          height: 20px;
-          background: linear-gradient(135deg, #FFD700, #DAA520);
-          border-radius: 4px;
-          position: relative;
-          overflow: hidden;
-        }
-        .fid-chip::after {
-          content: "";
-          position: absolute;
-          top: 0; left: -100%;
-          width: 50%; height: 100%;
-          background: linear-gradient(to right, transparent, rgba(255,255,255,0.8), transparent);
-          animation: sweep 3s infinite;
+        .fid-phone-header {
+           display: flex;
+           align-items: center;
+           gap: 0.4rem;
+           margin-top: 0.5rem;
+           margin-bottom: 1rem;
         }
 
-        .fid-body {
-          display: flex;
-          gap: 1rem;
-          flex: 1;
+        .fid-phone-brand {
+           font-size: 0.7rem;
+           font-weight: 800;
+           color: #ffffff;
+           letter-spacing: 0.05em;
         }
 
-        .fid-photo {
-          width: 60px;
-          height: 75px;
-          background: rgba(255,255,255,0.1);
-          border-radius: 4px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: rgba(255,255,255,0.3);
+        .fid-phone-qr {
+           width: 80px;
+           height: 80px;
+           background: white;
+           border-radius: 6px;
+           padding: 3px;
+           margin-bottom: 1rem;
+           box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
-        .fid-details {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          gap: 0.5rem;
+        .fid-phone-qr img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
         }
+
+        .fid-phone-user {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           gap: 0.5rem;
+           width: 100%;
+           margin-bottom: 1rem;
+        }
+
+        .fid-phone-avatar {
+           width: 40px;
+           height: 40px;
+           border-radius: 50%;
+           overflow: hidden;
+           border: 2px solid var(--product-accent);
+        }
+
+        .fid-phone-avatar img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+        }
+
+        .fid-phone-lines {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           gap: 5px;
+           width: 100%;
+        }
+
         .fid-line {
-          height: 6px;
+          height: 4px;
           background: rgba(255,255,255,0.1);
-          border-radius: 3px;
+          border-radius: 2px;
         }
-        .fid-line.w-full { width: 100%; }
-        .fid-line.w-3-4 { width: 75%; }
-        .fid-line.w-1-2 { width: 50%; }
+        .fid-line.w-full { width: 70%; }
+        .fid-line.w-3-4 { width: 40%; }
 
-        .fid-approved {
-          position: absolute;
-          bottom: 1rem;
-          right: 1rem;
-          border: 2px solid #10b981;
-          color: #10b981;
-          font-weight: 900;
-          font-size: 0.7rem;
-          padding: 0.2rem 0.5rem;
-          transform: rotate(-15deg);
-          border-radius: 4px;
-          letter-spacing: 0.1em;
+        .fid-phone-status {
+           margin-top: auto;
+           display: inline-flex;
+           align-items: center;
+           gap: 0.3rem;
+           color: #10b981;
+           font-weight: 800;
+           font-size: 0.65rem;
+           text-transform: uppercase;
+           letter-spacing: 0.05em;
+           background: rgba(16, 185, 129, 0.1);
+           padding: 0.3rem 0.6rem;
+           border-radius: 10px;
+           border: 1px solid rgba(16, 185, 129, 0.2);
         }
 
         /* ----------------------------------
@@ -564,25 +583,38 @@ const Products = () => {
 
 const FinancialIdVisual = () => (
   <div className="visual-container">
-    <div className="fid-card">
-      <div className="fid-header">
-        <span className="fid-title">VERIFID CITIZEN</span>
-        <div className="fid-chip"></div>
+    <div className="fid-phone">
+      <div className="fid-phone-notch"></div>
+      
+      <div className="fid-phone-header">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--product-accent)" strokeWidth="2" width="16">
+          <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path>
+          <path d="M3 5v14a2 2 0 0 0 2 2h16v-5H5a2 2 0 0 0 0 4h14v-4"></path>
+        </svg>
+        <span className="fid-phone-brand">VerifID</span>
       </div>
-      <div className="fid-body">
-        <div className="fid-photo">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="32">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" />
-          </svg>
+
+      <div className="fid-phone-qr">
+         <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuANXIvqyxmlEJICDhjSlcqFCzMagPx0kIeHriFvHA1QA5mKcjmson9LXl7tyCPPkZbQoFCrQuqEKt-GfQlhypM_NGYhvUk4mBr7678bbjBpdw-gECblcbRy8tI1x9PTB2Yc8ri9a6j2Vba_d-eZD0bT0baeRJMPCtaF2ItevJZhY0RhUwQlX5FDfNFHsY5TTyPG4UePEAMbtT2kn8PCQJDi0r9X95zd09yXyK68jnVq5Dpt5P4Skotx-5AQesKJ29fyVS7VEpfznkId" alt="QR" />
+      </div>
+
+      <div className="fid-phone-user">
+        <div className="fid-phone-avatar">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6AuqLopMl8ZQXZ5cfB37MgCPPuy8o1OxniCcVqPHzvBaf4eujXPylf2ZjHkXpCulQDud_8tf0pXFQ1uqkjiHOl4xxTK3ry37DK-hl9uNiw67B73hfADHEGJnKMPSwfSa8B7_IhDTSWa48XXJVvlxhWKBy8-PCFD_ASzx6KNN7R5XLrDiI9bpEfY2EVL8OAMdZRCgptb4US50oRf6sk4EThgFxdv_zjendMjvDL780ROQzBeZtzD5nZTWiBoL4N9V5foS983R0y0Qj" alt="User" />
         </div>
-        <div className="fid-details">
-          <div className="fid-line w-3-4"></div>
-          <div className="fid-line w-1-2"></div>
-          <div className="fid-line w-full" style={{ marginTop: 'auto' }}></div>
+        <div className="fid-phone-lines">
           <div className="fid-line w-full"></div>
+          <div className="fid-line w-3-4"></div>
         </div>
       </div>
-      <div className="fid-approved">VERIFIED</div>
+
+      <div className="fid-phone-status">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="12">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        Verified
+      </div>
     </div>
   </div>
 );
