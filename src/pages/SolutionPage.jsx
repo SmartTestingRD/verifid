@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { solutionsData } from '../data/solutionsData';
-import PartnerSumsub from '../components/PartnerSumsub';
 import VisualEngine from '../components/VisualEngine';
 
 const SolutionPage = () => {
@@ -139,11 +138,6 @@ const SolutionPage = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Injected Partner Section */}
-            <div className="partner-injection animate-on-scroll fade-up">
-                <PartnerSumsub />
-            </div>
 
             <style>{`
                 .solution-page {

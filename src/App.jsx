@@ -9,7 +9,6 @@ import PlatformIntro from './components/PlatformIntro';
 import MiddleCTA from './components/MiddleCTA';
 import Products from './components/Products';
 import SolutionsCarousel from './components/SolutionsCarousel';
-import PartnerSumsub from './components/PartnerSumsub';
 import Services from './components/Services';
 import SloganBanner from './components/SloganBanner';
 import Footer from './components/Footer';
@@ -29,7 +28,6 @@ const Home = () => (
     <MiddleCTA />
     <Products />
     <SolutionsCarousel />
-    <PartnerSumsub />
     <Services />
   </div>
 );
