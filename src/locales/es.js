@@ -109,15 +109,7 @@ export const es = {
     "footer.city": "Humacao, PR 00791",
     "footer.rights": "Todos los derechos reservados",
 
-    // Sumsub Partnership
-    "partnership.badge": "Alianza Estratégica",
-    "partnership.title": "Potenciado por Sumsub",
-    "partnership.desc_1": "Verificación biométrica, control de documentos y detección de riesgos a escala global, integrados de forma nativa en VerifID.",
-    "partnership.desc_2": "VerifID integra el motor de verificación de Sumsub para ofrecer pruebas de vida, autenticidad de ID (OCR/MRZ) y listas de vigilancia/PEP dentro de un único flujo de trabajo preparado para auditorías gubernamentales, de seguros y financieras. El resultado: un registro más rápido, menos falsos positivos y cumplimiento demostrable alineado con GDPR/ISO/FATF, sin sacrificar la experiencia del usuario.",
-    "partnership.check_1": "Prueba de Vida y Facial · OCR/MRZ · Anti-spoofing",
-    "partnership.check_2": "Listas de vigilancia, PEPs y Medios Adversos · Monitoreo",
-    "partnership.check_3": "SDKs/APIs y Webhooks · Cobertura global · UX localizada",
-    "partnership.check_4": "Manejo de datos ISO/GDPR · Registros y auditorías firmados",
+
 
     // Solutions Carousel
     "solutions.badge": "Soluciones del Ecosistema",

@@ -109,15 +109,7 @@ export const tr = {
     "footer.city": "Humacao, PR 00791",
     "footer.rights": "Tüm hakları saklıdır",
 
-    // Sumsub Partnership
-    "partnership.badge": "Stratejik Ortaklık",
-    "partnership.title": "Sumsub Tarafından Desteklenmektedir",
-    "partnership.desc_1": "Biyometrik doğrulama, belge kontrolleri ve küresel ölçekte risk taraması — doğrudan VerifID'ye entegre edilmiştir.",
-    "partnership.desc_2": "VerifID, sigorta, finans ve devlet kurumları için denetime hazır tek bir iş akışı oluşturmak amacıyla canlılık, kimlik doğrulama ve izleme listelerini Sumsub'ın doğrulama motoruyla birleştirir.",
-    "partnership.check_1": "Canlılık ve Yüz Eşleştirme · OCR/MRZ · Sahtecilik Önleme",
-    "partnership.check_2": "İzleme Listeleri, Siyasi Nüfuz Sahibi Kişiler ve Medya Taraması · Sürekli İzleme",
-    "partnership.check_3": "SDK'lar/API'ler ve Webhook'lar · Küresel kapsam · Yerelleştirilmiş Kullanıcı Deneyimi",
-    "partnership.check_4": "GDPR/ISO uyumlu Veri İşleme · İmzalı Loglar ve Denetimler",
+
 
     // Solutions Carousel
     "solutions.badge": "Ekosistem Çözümleri",

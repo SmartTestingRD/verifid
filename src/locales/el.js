@@ -109,15 +109,7 @@ export const el = {
     "footer.city": "Humacao, PR 00791",
     "footer.rights": "Όλα τα δικαιώματα διατηρούνται",
 
-    // Sumsub Partnership
-    "partnership.badge": "Στρατηγική Συνεργασία",
-    "partnership.title": "Με την υποστήριξη του Sumsub",
-    "partnership.desc_1": "Βιομετρική επαλήθευση, έλεγχοι εγγράφων και έλεγχος κινδύνου σε παγκόσμια κλίμακα.",
-    "partnership.desc_2": "Το VerifID ενσωματώνει τη μηχανή επαλήθευσης του Sumsub για να παραδώσει liveness, αυθεντικότητα ID.",
-    "partnership.check_1": "Liveness & Αντιστοίχιση Προσώπου · OCR/MRZ · Anti-spoofing",
-    "partnership.check_2": "Λίστες παρακολούθησης, PEPs & Δυσμενή Μέσα · Συνεχής παρακολούθηση",
-    "partnership.check_3": "SDKs/APIs & Webhooks · Παγκόσμια κάλυψη · Τοπικό UX",
-    "partnership.check_4": "Χειρισμός δεδομένων ευθυγραμμισμένος με GDPR/ISO · Υπογεγραμμένα αρχεία καταγραφής",
+
 
     // Solutions Carousel
     "solutions.badge": "Λύσεις Οικοσυστήματος",
